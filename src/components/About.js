@@ -47,6 +47,14 @@ const useStyles = makeStyles(theme => ({
             top: '60%'
         },
     },
+    eveimg:{
+width:'400px',
+height:'auto',
+margin:'auto',
+[theme.breakpoints.down('sm')]: {
+  width:'340px',
+},
+    }
 }));
 
 
@@ -90,8 +98,9 @@ export default function About() {
     return (
         
         <ReactWOW animation='tada'>
+          
                     <div id="about"  >
-            <p className={classes.title}>About</p>
+            <p className={classes.title} style={{paddingTop:'50px'}}>About</p>
             
             <Container maxWidth="lg" component="main">
             <p className={classes.subtitle}>We are Nepali restaurent located in Albany,California. We have been in service for __ yeas and we are here to provide you the best Nepali cuisine experience you ever had in life!</p>
@@ -105,8 +114,9 @@ export default function About() {
         <img
           src={ src }
           onClick={ () => openImageViewer(index) }
-          width="400"
+         
           key={ index }
+          className={classes.eveimg}
           style={{ margin: '2px' }}
           alt=""/>               
          
@@ -119,6 +129,7 @@ export default function About() {
           onClose={ closeImageViewer }
           backgroundStyle={{
             backgroundColor: "rgba(0,0,0,0.9)"
+            
           }}
         />
       )}

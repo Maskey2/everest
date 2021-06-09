@@ -66,9 +66,9 @@ export default function Pricing() {
               <a href='/' className={classes.linka}><strong>Everest Kitchen </strong></a>                         
               </Typography>
               <ul>    
-              <a href='/menu' className={classes.link}><li>Menu  </li></a> 
-              <a href='/#about' className={classes.link}><li>About  </li>  </a>     
-              <a href='/#contact' className={classes.link}><li>Contact  </li> </a>           
+              {/* <a href='https://everest.onrender.com/menu' className={classes.link}><li>Menu  </li></a>  */}
+             <li><a href='/#about' className={classes.link}>About  </a>      </li> 
+             <li> <a href="tel:510-579-5079" className={classes.link}>Contact                            </a>  </li>        
               </ul>
             </Grid>  
             <Grid item xs={6} sm={3} md={4} lg={4} justify="center" alignItems="center">
