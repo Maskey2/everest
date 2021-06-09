@@ -3,13 +3,28 @@ import { makeStyles } from '@material-ui/core/styles';
 import './../index.css';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
+import ReactWOW from 'react-wow'
 
 const useStyles = makeStyles(theme => ({
-    link: {
+    link1: {
         fontFamily: 'Poppins',
         fontSize: '20px',
         textDecoration: 'none',
-        color: 'grey',
+        color: 'black',
+        padding: '0px 10px',
+        display: 'flex',
+        justifyContent: 'center',
+        '&:hover': {
+            transform: 'scale(1.1)',
+            transition: 'transform .3s ease',
+            color: 'white',
+        },
+    },
+    link2: {
+        fontFamily: 'Poppins',
+        fontSize: '20px',
+        textDecoration: 'none',
+        color: 'white',
         padding: '0px 10px',
         display: 'flex',
         justifyContent: 'center',
@@ -61,8 +76,10 @@ const useStyles = makeStyles(theme => ({
         top: '60%',
         left: '6%',
         justifyContent: 'center',
+        backgroundColor:'#e0d12e',
         alignItems: 'center',
         color: 'black',
+        border:'none',
         [theme.breakpoints.down('sm')]: {
            display:'none'
         },
@@ -70,20 +87,58 @@ const useStyles = makeStyles(theme => ({
             fontSize: '25px',
             top: '70%'
         },
+        '&:hover': {
+            transform: 'scale(1.1)',
+            transition: 'transform .3s ease',
+            backgroundColor:'black',
+            border:'none'
+        },
+    
+    },
+    button2: {
+        fontSize: '20px',
+        fontFamily: 'Poppins',
+        position: 'absolute',
+        backgroundColor:'black',
+        top: '68%',
+        left: '6%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'white',
+        [theme.breakpoints.down('sm')]: {
+           display:'none'
+        },
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '25px',
+            top: '70%'
+        },
+        '&:hover': {
+            transform: 'scale(1.1)',
+            transition: 'transform .3s ease',
+            backgroundColor:'#e0d12e',
+            border:'none'
+        },
     }
 }));
 
 export default function Mainimg() {
     const classes = useStyles();
     return (
-        <div>
+        <ReactWOW animation='fadeIn'>
             <div className="bg"></div>
             <h1 className={classes.pStyle}>Everest Kitchen</h1>
             <p className={classes.subpStyle}> <em>"We are here to provide you the best Nepali cuisine experience you ever had!"</em></p>
             <Button variant="outlined" size="large" color="primary" className={classes.button}>
-            <Link to="/menu" className={classes.link}>
+            <Link to="/menu" className={classes.link1}>
                             View Menu</Link>
+                            <br/>
+                          
         </Button>
-        </div>
+<br></br>
+        <Button variant="outlined" size="large"  className={classes.button2}>           
+                            <a href="tel:510-579-5079"className={classes.link2}>Call 510-579-5079
+                            </a>
+        </Button>
+        </ReactWOW>
     )
 }
