@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
+import Logo from '../images/logo.png'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '20px',
         textDecoration: 'none',
         color: 'grey',
-        padding: '0px 10px',
+        padding: '0px 30px',
         display: 'flex',
         justifyContent: 'center',
         '&:hover': {
@@ -59,7 +60,11 @@ function ElevateAppBar(props) {
                     backgroundColor: 'white',
                     color: 'white', height: '55px',
                 }}>
-                    <Toolbar style={{ display: 'flex', justifyContent: 'center' }}>
+                    <Toolbar style={{ display: 'flex', justifyContent: 'left' }}>
+                    <Typography variant="subheading" color="inherit">
+                            <Link to="/" ><img src={Logo} style={{width:'14%', height:'auto'}} alt="main-logo"/>
+                            </Link>
+                        </Typography>
                         <Typography variant="subheading" color="inherit">
                             <Link to="/" className={classes.link}>HOME
                             </Link>

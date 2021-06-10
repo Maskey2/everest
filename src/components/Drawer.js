@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import { Link } from 'react-router-dom'
 import { AppBar, Toolbar, Grid, Box, } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import Logo from '../images/logo.png'
 
 const useStyles = makeStyles({
     list: {
@@ -72,15 +73,21 @@ export default function TemporaryDrawer() {
                     <React.Fragment key={anchor}>
                         <AppBar className={classes.color} >
                             <Toolbar >
-                                <Grid container direction="row" justify="space-between"  >
-                                    <MenuIcon style={{ fontSize: '30px' }} onClick={toggleDrawer(anchor, true)}>{anchor}/></MenuIcon>
+                                <div style={{display:'contents'}} >
+                                <Grid item xs={6} style={{display: 'grid'}}>
+                                <MenuIcon style={{ fontSize: '30px' }} onClick={toggleDrawer(anchor, true)}></MenuIcon>
                                     <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                                         {list(anchor)}
                                     </Drawer>
-                                    <Link to="/" style={{textDecoration:'none', color:'black'}}>Everest
-                                       {/* <img src={logo} className={classes.reslogo} alt="" /> */}
+                                    </Grid>
+                                    <Grid item xs={6} >
+                                    <Link to="/" style={{textDecoration:'none', color:'black'}}>
+                                    <img src={Logo} style={{maxWidth:'93%', height:'auto'}} alt="main-logo"/>
                                     </Link>
-                                </Grid>
+                                    </Grid>
+                                   
+                                   
+                                </div>
                             </Toolbar>
                         </AppBar>
                     </React.Fragment>

@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         color: '#575656',
+        textShadow: '#e4e4e4 4px 4px 7px;',
         [theme.breakpoints.down('sm')]: {
             fontSize: '75px',
             textAlign: 'center'
@@ -59,21 +60,28 @@ const useStyles = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         color: 'black',
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '20px',
-            textAlign: 'center',
-            left: 0
-        },
+        textShadow: '#e4e4e4 7px 7px 7px;',        
+        
         [theme.breakpoints.down('lg')]: {
             fontSize: '25px',
-            top: '60%'
+            top: '50%'
+        },
+        [theme.breakpoints.down('md')]: {
+            top: '50%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '22px',
+            top: '55%',
+            textAlign: 'center',
+            textShadow: '2px 2px 3em #fff, 0 0 0.4em #fff;',
+            left: 0
         },
     },
     button: {
         fontSize: '20px',
         fontFamily: 'Poppins',
         position: 'absolute',
-        top: '60%',
+        top: '67%',
         left: '6%',
         justifyContent: 'center',
         backgroundColor:'#e0d12e',
@@ -85,7 +93,11 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.down('lg')]: {
             fontSize: '25px',
-            top: '70%'
+            top: '60%',
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '25px',
+            top: '58%',
         },
         '&:hover': {
             transform: 'scale(1.1)',
@@ -100,18 +112,23 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Poppins',
         position: 'absolute',
         backgroundColor:'black',
-        top: '68%',
+        top: '78%',
         left: '6%',
         justifyContent: 'center',
         alignItems: 'center',
         color: 'white',
-        [theme.breakpoints.down('sm')]: {
-           display:'none'
-        },
+        
         [theme.breakpoints.down('lg')]: {
             fontSize: '25px',
             top: '70%'
         },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '25px',
+            top: '68%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            display:'none'
+         },
         '&:hover': {
             transform: 'scale(1.1)',
             transition: 'transform .3s ease',
@@ -124,10 +141,14 @@ const useStyles = makeStyles(theme => ({
 export default function Mainimg() {
     const classes = useStyles();
     return (
-        <ReactWOW animation='fadeIn'>
+        <div>
             <div className="bg"></div>
+            <ReactWOW animation='fadeInUp' >
             <h1 className={classes.pStyle}>Everest Kitchen</h1>
+            </ReactWOW>
+            <ReactWOW animation='fadeIn' delay="0.8s">
             <p className={classes.subpStyle}> <em>"We are here to provide you the best Nepali cuisine experience you ever had!"</em></p>
+            </ReactWOW>
             <Button variant="outlined" size="large" color="primary" className={classes.button}>
             <Link to="/menu" className={classes.link1}>
                             View Menu</Link>
@@ -139,6 +160,6 @@ export default function Mainimg() {
                             <a href="tel:510-579-5079"className={classes.link2}>Call 510-579-5079
                             </a>
         </Button>
-        </ReactWOW>
+        </div>
     )
 }
