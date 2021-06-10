@@ -81,8 +81,8 @@ export default function TemporaryDrawer() {
                                     </Drawer>
                                     </Grid>
                                     <Grid item xs={6} >
-                                    <Link to="/" style={{textDecoration:'none', color:'black'}}>
-                                    <img src={Logo} style={{maxWidth:'93%', height:'auto'}} alt="main-logo"/>
+                                    <Link to="/">
+                                    <img src={Logo} style={{maxWidth:'93%', height:'auto', verticalAlign:'middle'}} alt="main-logo"/>
                                     </Link>
                                     </Grid>
                                    

@@ -27,22 +27,11 @@ const useStyles = makeStyles(theme => ({
   mainlogo: {
     width:'30%', 
     height:'auto',
-    paddingTop:'20px',
+    paddingTop:'40px',
     [theme.breakpoints.down('sm')]: {
       width:'80%', 
   },
-}, 
-    
-    title: {
-        fontSize: '70px',
-        fontFamily: 'Quicksand',
-        textAlign: 'center',
-        color: '#575656',
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '75px',
-            textAlign: 'center'
-        },
-    },
+},
     subtitle: {
         fontSize: '30px',
         fontFamily: 'Courgette',
@@ -114,11 +103,8 @@ export default function About() {
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const images = [      
         // require('../images/pakora-2.jpg'),
-
-        require('../images/chaat.jpg'),
-        
+        require('../images/chaat.jpg'),        
         require('../images/chicken_korma.jpeg'),
-
         require('../images/biryani.jpg'),
         require('../images/ch-chilli.jpeg'),
         require('../images/ch-momo.jpeg'),
@@ -143,13 +129,9 @@ export default function About() {
 
 
     const classes = useStyles();
-    return (
-     
-        
-          
-                    <div id="about"  >
-                    
-            <p className={classes.title}><img src={Logo} className={classes.mainlogo} alt="main-logo"/></p>
+    return (   
+            <div id="about"  style={{textAlign:'center'}}>                    
+          <img src={Logo} className={classes.mainlogo} alt="main-logo"/>
             
             <Container maxWidth="lg" component="main">
             <ReactWOW animation='fadeInUp'>

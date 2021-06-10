@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '22px',
-            top: '55%',
+            top: '65%',
             textAlign: 'center',
             textShadow: '2px 2px 3em #fff, 0 0 0.4em #fff;',
             left: 0
