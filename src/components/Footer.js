@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
@@ -91,8 +91,8 @@ export default function Pricing() {
               
              <li><a href='/#about' className={classes.link}>About  </a> </li> 
              <li> <a href="tel:510-579-5079" className={classes.link}>Contact </a>  </li>   
-             <li> <a href='/menu' className={classes.link}>Menu </a>  </li>  
-             <li> <a href='/gallery'  className={classes.link}>Gallery </a>  </li>   
+             <li>  <Link to="/menu" className={classes.link}>Menu          </Link> </li>
+             <li> <Link to="/gallery" className={classes.link}>Gallery     </Link>  </li>   
              <li>  <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link}> Order Online </a>  </li>        
               </ul>
             </Grid>  
