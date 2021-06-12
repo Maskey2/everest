@@ -6,6 +6,7 @@ import Privacy from './components/Privacy'
 import Footer from './components/Footer';
 import Navbar from './components/Navbar'
 import About from './components/About'
+import Gallery from './components/Gallery'
 import Menu from './components/Menu'
 import Box from '@material-ui/core/Box';
 import Drawer from './components/Drawer'
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/" component={Home}></Route>
         <Route path="/about" component={About} ></Route>
         <Route path="/menu" component={Menu}></Route>
+        <Route path="/gallery" component={Gallery}></Route>
         <Route path="/privacypolicy" component={Privacy} ></Route>
         <Route path="/termsofuse" component={Termsofuse}></Route>
       </Switch>

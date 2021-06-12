@@ -59,7 +59,14 @@ export default function TemporaryDrawer() {
                 <a href='/#about' className={classes.reslink}>About  </a>    
                     </ListItem>
                 <ListItem key={2} button divider>
-                    <Link to="/menu" className={classes.reslink}>Menu</Link></ListItem>
+                    <Link to="/menu" className={classes.reslink}>Menu</Link>
+                    </ListItem>
+                    <ListItem key={4} button divider>
+                    <Link to="/gallery" className={classes.reslink}>Gallery</Link>
+                    </ListItem>
+                    <ListItem key={4} button divider>
+                    <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.reslink}>Order Online
+                            </a>  </ListItem>
 
 
             </List>

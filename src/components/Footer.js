@@ -49,8 +49,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     link:{
+        paddingLeft:'5px',
         textDecoration:'none',
-        color:'black'
+        color:'black',
     },
     linka:{
         textDecoration:'none',
@@ -58,11 +59,17 @@ const useStyles = makeStyles((theme) => ({
         color:'black'
     },
     mainlogo: {
-        width:'50%',
+        width:'16%',
         height:'auto',
         [theme.breakpoints.down('sm')]: {
             width:'80%',
         },
+    },
+    getint:{
+       textAlign:'right',
+       [theme.breakpoints.down('sm')]: {
+        textAlign:'center',
+    },
     }
 }));
 
@@ -74,25 +81,30 @@ export default function Pricing() {
 
       
     <Container maxWidth="lg" component="footer" className={classes.footer} >
-        <Grid container spacing={2}>        
+          <a href='/' className={classes.linka} onClick={handleClick}><img src={Logo} className={classes.mainlogo}  alt="main-logo"/></a> 
+        <Grid container spacing={2} >        
             <Grid item xs={6} sm={3} md={4} lg={4} >
-              <Typography component={'span'} className={classes.headerlink}>
-              <a href='/' className={classes.linka} onClick={handleClick}><img src={Logo} className={classes.mainlogo}  alt="main-logo"/></a>                         
-              </Typography>
+              
+                                    
+             
               <ul>    
-              {/* <a href='https://everest.onrender.com/menu' className={classes.link}><li>Menu  </li></a>  */}
-             <li><a href='/#about' className={classes.link}>About  </a>      </li> 
-             <li> <a href="tel:510-579-5079" className={classes.link}>Contact                            </a>  </li>        
+              
+             <li><a href='/#about' className={classes.link}>About  </a> </li> 
+             <li> <a href="tel:510-579-5079" className={classes.link}>Contact </a>  </li>   
+             <li> <a href='/menu' className={classes.link}>Menu </a>  </li>  
+             <li> <a href='/gallery'  className={classes.link}>Gallery </a>  </li>   
+             <li>  <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link}> Order Online </a>  </li>        
               </ul>
             </Grid>  
-            <Grid item xs={6} sm={3} md={4} lg={4} >
+            <Grid item xs={6} sm={3} md={4} lg={4} style={{textAlign:'center'}}>
             <a href="https://www.google.com/maps/dir/29.9556943,-90.1936557/1150+Solano+Ave,+Albany,+CA+94706/@32.588076,-124.3538617,4z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8085793225bfd6df:0xa1ba86d69d6ea318!2m2!1d-122.2974194!2d37.8901832">
            <img src={Map} alt="Map" style={{width:'80%',height:'auto'}}/>
             </a>
+            <p style={{textAlign:'center'}}>1150 Solano Ave, Albany, CA</p>
             </Grid>  
 
             
-            <Grid item xs={12} sm={6} md={4} lg={4}>
+            <Grid item xs={12} sm={6} md={4} lg={4} className={classes.getint}>
               
                
                <Typography component="h2" className={classes.headerlink} style={{paddingLeft:'5px', paddingBottom: '5px', fontSize: '22px', fontFamily: "Poppins, sans-serif"}}> Get in Touch with us!</Typography>             

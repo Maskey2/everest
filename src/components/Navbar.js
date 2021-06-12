@@ -16,11 +16,11 @@ const useStyles = makeStyles(theme => ({
     },
     link: {
         fontFamily: 'Poppins',
-        fontSize: '20px',
+        fontSize: '17px',
         textDecoration: 'none',
         color: 'grey',
-        padding: '0px 30px',
         display: 'flex',
+        width: '140px',
         justifyContent: 'center',
         '&:hover': {
             transform: 'scale(1.1)',
@@ -62,7 +62,7 @@ function ElevateAppBar(props) {
                 }}>
                     <Toolbar style={{ display: 'flex', justifyContent: 'left' }}>
                     <Typography variant="subheading" color="inherit">
-                            <Link to="/" ><img src={Logo} style={{width:'14%', height:'auto'}} alt="main-logo"/>
+                            <Link to="/" ><img src={Logo} style={{width:'24%', height:'auto'}} alt="main-logo"/>
                             </Link>
                         </Typography>
                         <Typography variant="subheading" color="inherit">
@@ -76,6 +76,14 @@ function ElevateAppBar(props) {
                         <Typography variant="subheading" color="inherit" >
                             <Link to="/menu" className={classes.link}>MENU
                             </Link>
+                        </Typography>
+                        <Typography variant="subheading" color="inherit" >
+                            <Link to="/gallery" className={classes.link}>GALLERY
+                            </Link>
+                        </Typography>
+                        <Typography variant="subheading" color="inherit" >
+                            <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link}>ORDER-ONLINE
+                            </a>
                         </Typography>
                     </Toolbar>
                 </AppBar>
