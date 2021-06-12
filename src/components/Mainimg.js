@@ -128,6 +128,12 @@ const useStyles = makeStyles(theme => ({
             backgroundColor:'#e0d12e',
             border:'none'
         },
+    },
+    padding:{
+        marginTop:'0px',
+        [theme.breakpoints.down('sm')]: {
+          marginTop:'14%',
+       },
     }
 }));
 
@@ -145,15 +151,15 @@ const arrowStyles = {
     top:0,
     bottom:0,
     backgroundColor:'lightgrey',
-    opacity:'.4',
-    
-  }
+    opacity:'.4',    
+  },
+ 
  
 };
 export default function Mainimg() {
     const classes = useStyles();
     return (
-        <div>
+        <div className={classes.padding}>
              <Carousel 
         autoPlay
         transitionTime={1500}
@@ -190,17 +196,7 @@ export default function Mainimg() {
             <ReactWOW animation='fadeIn' delay="0.8s">
             {/* <p className={classes.subpStyle}> <em>"We are here to provide you the best Nepali cuisine experience you ever had!"</em></p> */}
             </ReactWOW>
-            {/* <Button variant="outlined" size="large" color="primary" className={classes.button}>
-            <Link to="/menu" className={classes.link1}>
-                            View Menu</Link>
-                            <br/>
-                          
-        </Button>
-<br></br>
-        <Button variant="outlined" size="large"  className={classes.button2}>           
-                            <a href="tel:510-579-5079"className={classes.link2}>Call 510-579-5079
-                            </a>
-        </Button> */}
+           
         </div>
     )
 }
