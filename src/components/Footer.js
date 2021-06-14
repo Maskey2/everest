@@ -93,7 +93,7 @@ export default function Pricing() {
              <li> <a href="tel:510-579-5079" className={classes.link}>Contact </a>  </li>   
              <li>  <Link to="/menu" className={classes.link}>Menu          </Link> </li>
              <li> <Link to="/gallery" className={classes.link}>Gallery     </Link>  </li>   
-             <li>  <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link}> Order Online </a>  </li>        
+             <li>  <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link}  target="_blank"> Order Online </a>  </li>        
               </ul>
             </Grid>  
             <Grid item xs={6} sm={3} md={4} lg={4} style={{textAlign:'center'}}>
@@ -110,7 +110,7 @@ export default function Pricing() {
                <Typography component="h2" className={classes.headerlink} style={{paddingLeft:'5px', paddingBottom: '5px', fontSize: '22px', fontFamily: "Poppins, sans-serif"}}> Get in Touch with us!</Typography>             
             <Typography component={'span'} className={classes.link} style={{padding:'5px',   fontFamily: "Poppins, sans-serif"}}><a href="https://www.facebook.com/Everestkitchenca"  className={classes.link} ><FacebookIcon/></a></Typography>     
             <Typography component={'span'} className={classes.link} style={{padding:'5px',   fontFamily: "Poppins, sans-serif"}}><a href="https://www.instagram.com/everestkitchen_albany_ca/"  className={classes.link} ><InstagramIcon/></a></Typography>   
-            <a href="https://www.google.com/maps/dir/29.9556943,-90.1936557/1150+Solano+Ave,+Albany,+CA+94706/@32.588076,-124.3538617,4z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8085793225bfd6df:0xa1ba86d69d6ea318!2m2!1d-122.2974194!2d37.8901832">       
+            <a href="https://www.google.com/maps/dir/29.9556943,-90.1936557/1150+Solano+Ave,+Albany,+CA+94706/@32.588076,-124.3538617,4z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8085793225bfd6df:0xa1ba86d69d6ea318!2m2!1d-122.2974194!2d37.8901832" target="_blank">       
             <Typography component={'span'} className={classes.link} style={{padding:'5px',   fontFamily: "Poppins, sans-serif"}}><RoomIcon/></Typography>  </a>
          
         </Grid>

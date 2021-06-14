@@ -82,7 +82,7 @@ function ElevateAppBar(props) {
                             </Link>
                         </Typography>
                         <Typography variant="subheading" color="inherit" >
-                            <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link}>ORDER-ONLINE
+                        <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link} target="_blank"> ORDER-ONLINE
                             </a>
                         </Typography>
                     </Toolbar>

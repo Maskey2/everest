@@ -167,7 +167,7 @@ return (
             </Grid>
             <Grid item xs={12} sm={4} md={4} lg={4}>
                <Button variant="outlined" size="large"  className={classes.button}>           
-               <a href="tel:510-579-5079"className={classes.link1}>Order Online
+               <a href="https://eatstreet.com/berkeley-ca/restaurants/everest-kitchen" className={classes.link1} target="_blank">   Order Online
                </a>
                </Button> 
             </Grid>
