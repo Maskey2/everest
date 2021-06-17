@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         width: 'auto',
     },
     color: {
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         color: 'grey'
     },
     reslogo: {
