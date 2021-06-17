@@ -16,11 +16,11 @@ const useStyles = makeStyles(theme => ({
     },
     link: {
         fontFamily: 'Poppins',
-        fontSize: '17px',
+        fontSize: '20px',
         textDecoration: 'none',
-        color: 'grey',
+        color: 'gold',
         display: 'flex',
-        width: '140px',
+        width: '170px',
         justifyContent: 'center',
         '&:hover': {
             transform: 'scale(1.1)',
@@ -28,6 +28,14 @@ const useStyles = makeStyles(theme => ({
             color: 'black',
         },
     },
+    logo:{
+        width:'30%', 
+        height:'auto', 
+        verticalAlign:'middle',
+        [theme.breakpoints.down('lg')]: {
+            width:'65%', 
+        },
+    }
 }));
 
 function ElevationScroll(props) {
@@ -57,12 +65,12 @@ function ElevateAppBar(props) {
         <React.Fragment>
             <ElevationScroll {...props}>
                 <AppBar className={classes.root} position="sticky" style={{
-                    backgroundColor: 'white',
-                    color: 'white', height: '55px',
+                    backgroundColor: 'black',
+                    color: 'white', height: '65px',
                 }}>
                     <Toolbar style={{ display: 'flex', justifyContent: 'left' }}>
                     <Typography variant="subheading" color="inherit">
-                            <Link to="/" ><img src={Logo} style={{width:'24%', height:'auto'}} alt="main-logo"/>
+                            <Link to="/" ><img src={Logo} className={classes.logo} alt="main-logo"/>
                             </Link>
                         </Typography>
                         <Typography variant="subheading" color="inherit">
