@@ -32,7 +32,7 @@ width:'80%',
 },
 subtitle: {
 fontSize: '30px',
-fontFamily: 'Courgette',
+fontFamily: 'Poppins',
 textAlign: 'center',
 color: 'black',
 [theme.breakpoints.down('sm')]: {
