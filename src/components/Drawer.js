@@ -20,8 +20,11 @@ const useStyles = makeStyles({
         backgroundColor: 'black',
         color: 'grey'
     },
-    reslogo: {
-        height: '30px',
+    reslogo: {        
+       maxWidth:'100%', 
+       height:'auto', 
+       verticalAlign:'middle',
+       paddingTop: '4px',
     },
     reslink: {
         textDecoration: 'none',
@@ -89,7 +92,7 @@ export default function TemporaryDrawer() {
                                     </Grid>
                                     <Grid item xs={6} >
                                     <Link to="/">
-                                    <img src={Logo} style={{maxWidth:'93%', height:'auto', verticalAlign:'middle'}} alt="main-logo"/>
+                                    <img src={Logo} className={classes.reslogo} alt="main-logo"/>
                                     </Link>
                                     </Grid>
                                    
