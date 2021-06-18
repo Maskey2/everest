@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             transform: 'scale(1.1)',
             transition: 'transform .3s ease',
-            color: 'black',
+            color: 'white',
         },
     },
     logo:{
